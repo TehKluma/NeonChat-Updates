@@ -6,6 +6,18 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## Live Service Health in NeonChat Support
+
+**July 21, 2026** · Support Experience
+
+- Turned View Service Status in the NeonChat Official support hub into a live health indicator backed by the public NeonChat status monitor.
+- Added a green All Systems Operational state when every customer-facing monitor is healthy, with automatic refreshes every 60 seconds.
+- Added a focused Voice Service Issues warning when affected checks are limited to voice and relay infrastructure.
+- Added Core Service Issues whenever NeonChat API or NeonLogin Auth is affected, even if it is the only failing monitor.
+- Added a red Service Outage state when three or more monitored services are affected, plus safe delayed/unavailable states when the status feed cannot be reached.
+- Added affected-service details on hover while keeping the full status page one click away.
+- Added a cached same-origin status endpoint so clients receive reliable health data without exposing cross-origin failures or overloading the external status server.
+
 ## Support Hub + DM Conversation Polish + Notification Controls
 
 **July 21, 2026** · Messaging Experience Refresh
