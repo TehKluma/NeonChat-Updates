@@ -1,5 +1,7 @@
 # NeonChat Updates
 
+![NeonChat Banner](./assets/neonchat-banner.png)
+
 Official release notes for NeonChat, generated from the same update feed shown at [neonchat.co/updates](https://neonchat.co/updates).
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
