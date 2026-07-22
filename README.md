@@ -6,6 +6,19 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## Games Hub + RAWG-Powered Collections
+
+**July 22, 2026** · Games Experience
+
+- Launched the NeonChat Games Hub with RAWG-powered discovery, rich game artwork and metadata, personal collections, gameplay journals, and friends activity.
+- Added My Games tracking for playing, completed, paused, backlog, wishlist, and dropped titles, including platform tags and detailed game views.
+- Brought game activity into member profiles and Active Now areas with real game artwork instead of profile avatars.
+- Added a compact Discord-style Game Collection row to profiles with stacked cover art, an overflow count, and direct routing into My Games.
+- Made profile cards responsive in smaller app windows with a readable compact layout and contained scrolling.
+- Moved Games Hub into the Friends navigation beside Discover and removed the oversized game shortcut from the server rail.
+- Added reliable dedicated Games routes so collection links open My Games directly instead of falling back to Discover or invite handling.
+- Kept RAWG credentials server-side and added normalized metadata, cached imports, graceful API errors, store links, screenshots, ratings, and official-site attribution.
+
 ## Nyx Return Signals + NeonChat Email Polish
 
 **July 21, 2026** · Email Experience
