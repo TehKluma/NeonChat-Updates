@@ -6,6 +6,17 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## Nyx Return Signals + NeonChat Email Polish
+
+**July 21, 2026** · Email Experience
+
+- Introduced a respectful Nyx-led return email for members who have not signed in for at least 60 days, highlighting the latest NeonChat improvements without turning the message into a sales pitch.
+- Added strict inactivity selection, marketing opt-out handling, signed unsubscribe links, daily campaign scheduling, and administration-only preview delivery for safer re-engagement outreach.
+- Created Nyx’s Corner as a neon-cosmic email backdrop with a solid-color fallback for mail clients that do not display background images.
+- Kept Nyx recognizable through the “Nyx · Guardian of the Neon Signal” signoff and the established authenticated NeonChat sender.
+- Moved the reassurance that accounts, conversations, and communities remain waiting directly above See What’s New, giving the call to action warmer and more personal context.
+- Added automated coverage for recipient eligibility, unsubscribe security, current product highlights, artwork inclusion, and call-to-action hierarchy.
+
 ## Live Service Health in NeonChat Support
 
 **July 21, 2026** · Support Experience
