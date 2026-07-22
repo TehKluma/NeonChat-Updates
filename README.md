@@ -219,7 +219,7 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 - Added sidebar drag-and-drop for regular channels, so server owners, admins, moderators on the main server, and anyone with that server’s channel-management power can move channels around directly instead of relying on only edit screens or arrow buttons.
 - Dragging a channel now supports Discord-style organization flows: you can drop a channel before another channel to reorder it, drop it onto a category header to move it into that category, or drop it back onto the root channel list to make it uncategorized again.
-- Updated the sidebar structure so once a server has real categories doing the grouping, the fake default `Text Channels` and `Voice Channels` headers stop taking over the layout and uncategorized channels sit at the root more like Discord.
+- Updated the sidebar structure so once a server has real categories doing the grouping, the fake default `Text Channels` and `Voice Channels` headers stop taking over the layout and uncategorized channels sit cleanly at the root.
 - Fixed system-channel behavior so protected channels like `live-now` can still be moved between categories even though their names and topics remain locked from normal edits.
 - Removed the old name-collision rules that were blocking saves just because a category and channel or a text and voice channel shared the same name, so channel/category naming now behaves much closer to Discord.
 - Created a rollback backup for this channel/category work at `backups/neonchat-channel-drag-category-fixes-20260323-015134.tar.gz` with SHA-256 `335d8a45b161f91927368e56d55837235161b1a7637b17a9866542e2e6cdba73`.
@@ -228,7 +228,7 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 **March 22, 2026**
 
-- Reworked channel creation in the left sidebar to feel more like Discord: channel/category headers now have compact `+` actions instead of a large creation card taking over the sidebar.
+- Reworked channel creation in the left sidebar around compact `+` actions on channel and category headers instead of a large creation card taking over the sidebar.
 - Added right-click actions on channel sections and categories so server owners/admins can quickly open `Add Text Channel`, `Add Voice Channel`, and `Add Category` directly from the sidebar.
 - Added sidebar drag-and-drop reordering for categories, so admins can grab a category header and move it around instead of having to rely on separate settings controls.
 - Restored a real `Broadcasting` category on the main NeonChat server and automatically grouped the broadcast-related channels under it when the backend normalizes server channels.
@@ -733,7 +733,7 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 - Restored quick status controls: Online, Idle, Busy.
 - Added Busy timing support and cleaner status update flow.
-- Updated the mini user popup to match the requested Discord-like behavior.
+- Updated the mini user popup with the requested compact profile behavior.
 
 ## Image Viewer + Voice Reliability
 
