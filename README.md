@@ -6,6 +6,38 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## Partner Lounge + Twitch Social Alerts + Custom Bot Branding + Mobile Build Tooling
+
+**July 23, 2026** · Community, Automation & Platform Update
+
+- Launched the private Partner Lounge for partnered-server owners and administrators, with automatic enrollment, Partner announcements, support, questions, showcases, feature previews, and feedback channels.
+- Made Partner Lounge membership automatic while a member manages a partnered community so important program-status, benefit, requirement, and early-feature updates cannot be missed.
+- Added correct Partner and official-admin visibility throughout Start Here, Partner Announcements, support, and Feature Previews, while keeping announcement-style channels read-only for Partner members.
+- Added a one-time Nyx partnership celebration modal with personalized server messaging, a full benefits summary, neon confetti, and celebratory effects.
+- Granted every active Partner server a complimentary 60-day AuroraNexus Pro evaluation, with the trial end date shown in Nexus settings and automatic fallback to permanent complimentary Nexus Plus—no charge or automatic conversion.
+- Granted official NeonChat administrators the expected Partner Lounge administration and server-management controls.
+- Added an official embedded Partner Support hub with private Partner Help, Report a Concern, and general ticket intake, live NeonChat service health, and direct routing into the authorized NeonChat staff queue.
+- Made new support tickets ping the authorized admin team in #admin-tickets, with a dedicated Respond to Ticket modal and dashboard replies that save to the ticket and deliver privately to the requester’s NeonChat DMs without posting staff responses into chat.
+- Expanded support-response DMs with the ticket number, subject, submission time, and full original request above the staff response so members can distinguish multiple tickets without guessing the context.
+- Linked requester DM replies back into the correct open ticket: replies now join the saved ticket history and appear as pinged, threaded User Reply updates beneath the original #admin-tickets post, where staff can respond again through the private modal.
+- Corrected self-DM identity handling so NeonChat no longer offers Add Friend against your own account, labels the conversation appropriately, blocks self-friend requests client-side, and never exposes raw proxy HTML as a friend-request error.
+- Added two-way ticket closure: requesters can type Close Ticket in the linked support DM, while admins can use the Close Ticket button beside Respond to Ticket; both paths update ticket history, notify the requester, and post a closed state into the admin thread.
+- Introduced Twitch Social Alerts for AuroraNexus, automatically detecting live streams via Twitch Helix API and posting go-live announcements to designated server channels.
+- Added custom alert message templates supporting dynamic variables ({streamer}, {title}, {game}, {url}, {viewers}, {login}), rich preview cards, and automatic stream ID deduplication to prevent repeat alerts.
+- Added an integrated server-member streamer picker in Server Settings → Nexus to quickly monitor Twitch accounts linked by community members.
+- Configured tier-based connection allowances for Twitch Social Alerts (Free: 1 streamer connection, Plus: 5 connections, Pro: 20 connections).
+- Added custom bot identity controls for AuroraNexus: Nexus Plus unlocks custom display name and embed footers, while Nexus Pro adds full avatar image uploads and custom accent color.
+- Applied custom bot branding across all channel posts, welcome cards, embeds, and the active bot entry in the server member roster.
+- Upgraded the AuroraNexus plan selection modal with React Portals and server identity context (icon, name, server ID) so owners always know which server is receiving an upgrade.
+- Added direct "Ask Nyx" action buttons to public Support and Nyx profile cards, automatically seeding contextual DM conversations with Nyx.
+- Refreshed Nyx’s profile card with a dedicated 📡 SIGNAL status ("Guardian online · Neon Signal active"), exclusive Calling tags, and guided support actions.
+- Reworked server-rail ordering for Electron with app-controlled pointer dragging, precise before/after/folder drop indicators, persistent custom ordering, and freedom to place Partner Lounge anywhere among server icons.
+- Upgraded Android mobile build configuration (v1.0.31 / versionCode 31) with automated release signing validation in the Gradle build task graph and published complete release documentation.
+- Added server role drag-and-drop reordering inside Server Settings → Roles.
+- Added editing and deletion for personal game entries and owned Friends Activity updates, using the same complete game form available when adding a title.
+- Added Pre-purchased as a game-collection status for upcoming games already secured by a member, backed by database schema migration 004_game_pre_purchased_status.sql.
+- Raised chat and direct-message GIF/image uploads from 5 MB to 25 MB.
+
 ## Games Hub + RAWG-Powered Collections
 
 **July 22, 2026** · Games Experience
