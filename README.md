@@ -6,6 +6,14 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## Android Download + Mobile Drawer Repair
+
+**July 24, 2026** · Android App & Mobile Layout
+
+- Restored the Android download route with a current debug-signed 1.0.38 APK while Play Store release signing is finalized.
+- Fixed the mobile Who's Online deck so it opens above the page overlay, closes cleanly when tapping outside it, and reports the inactive member count without listing the full offline roster.
+- Fixed the left mobile server/channel drawer layering so the dim overlay no longer blocks the server rail or channel list.
+
 ## Desktop App Login Fix
 
 **July 24, 2026** · Desktop App
