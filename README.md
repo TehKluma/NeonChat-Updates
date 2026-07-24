@@ -6,6 +6,16 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## Account Deletion Now Cleans Up NeonLogin Auth Rows
+
+**July 23, 2026** · Authentication, Self-Service & Operator Tooling
+
+- Extended the Settings → Account → Danger Zone Delete Account flow with a server-to-server call to NeonLogin so the deleted user's auth row in NeonLogin's database is also tombstoned. Self-service deletion on the NeonChat side always succeeds first; the NeonLogin cleanup is non-fatal and falls through to manual recovery if the shared secret or endpoint are misconfigured.
+- Added `NEONCHAT_INTERNAL_SECRET` (also set on NeonLogin's side) for HMAC-SHA256 + 5-minute-skew verification of the s2s call. Generate with `openssl rand -hex 32`. Requires `scripts/neonlogin-delete-account.php` to be deployed at `/var/www/midnite/public_html/NeonLogin/api/dev/delete-account.php` on the NeonDestiny/TeamMidnite shared webroot, served at `https://teammidnite.tv/NeonLogin/api/dev/delete-account.php`.
+- Closed a real production re-enable bypass where clicking Login with NeonLogin right after deleting an account was immediately re-creating the local user record. The deleted-identity blacklist check moved inside `upsertLocalUserFromNeonLogin`, and `createLocalSessionFromNeonLogin` now throws when the identity is tombstoned so no session token is ever issued for a deleted account.
+- Documented the rollout end-to-end in `docs/ACCOUNT_DELETION_RUNBOOK.md`: secret generation, env placement, PHP file deploy, smoke-test `curl`, audit log location and tag meanings, recovery flow for partial deletions, and the secret-rotation procedure.
+- Audit log on the NeonLogin side writes one line per call to `NEONLOGIN_S2S_AUDIT_LOG` (default `/var/log/neonlogin/account-deletions.log`), tagged with the redact strategy (`redacted_full` vs `redacted_minimal` vs `already_absent`) so operators can distinguish a happy-path tombstone from a schema-tolerant fallback.
+
 ## Partner Lounge + Twitch Social Alerts + Custom Bot Branding + Mobile Build Tooling
 
 **July 23, 2026** · Community, Automation & Platform Update
