@@ -6,6 +6,13 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## Desktop App Login Fix
+
+**July 24, 2026** · Desktop App
+
+- Fixed a NeonChat desktop app login bug that could keep the app from returning cleanly after NeonLogin.
+- Updated the Windows desktop app download and updater feed with the repaired build.
+
 ## Account Deletion Now Cleans Up NeonLogin Auth Rows
 
 **July 23, 2026** · Authentication, Self-Service & Operator Tooling
