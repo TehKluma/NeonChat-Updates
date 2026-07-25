@@ -6,6 +6,14 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## Frontend Crash Guard + Nyx Recovery
+
+**July 25, 2026** · Reliability & Mobile Stability
+
+- Fixed a production React hook-order crash that could appear after NeonChat moved from its loading or sign-in screen into the main app.
+- Kept the new Android Back handling and Nyx connection-signal monitoring on a stable render path so loading, authentication, custom-domain, Admin, Nexus, Developer, and public Updates routes all execute the same hook sequence.
+- Rebuilt and published the corrected web bundle, restoring the Nyx retry flow without removing the 1.0.39 mobile stability features.
+
 ## Mobile 1.0.39 Debug + Play Store Readiness
 
 **July 25, 2026** · Android, Mobile UX & Release Engineering
