@@ -6,9 +6,9 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
-## Member Signal Actions + Server Overview Facelift
+## Member Signals + Profiles, Partners & Server Identity
 
-**July 25, 2026** · Community, Presence & Server Identity
+**July 25, 2026** · Community, Profiles, Partners & Server Identity
 
 - Added NeonChat-native Signal Actions to human member rows: right-click on desktop or long-press on mobile to View Signal, Open Direct Line, Copy Handle, or Copy Signal ID.
 - Kept bots, verified bots, Nyx, and system accounts outside the human-member action menu.
@@ -21,6 +21,10 @@ Official release notes for NeonChat, generated from the same update feed shown a
 - Upgraded the Twitch calendar into date-led event cards with schedule times, host names, profile images, and truthful View on Twitch actions sourced from the authenticated 14-day community schedule.
 - Added a responsive full-screen mobile Server Overview and corrected the banner overlap so the server icon and name remain fully visible instead of being clipped by the scroll container.
 - Connected partnerlounge.neonchat.co directly to the private NeonChat Partner Lounge with an exact Apache route, active server mapping, valid Let’s Encrypt certificate, Cloudflare delivery, and hostname-preserving NeonLogin callback.
+- Refined My Account around a prominent live profile preview, clearer field guidance, and a profile-completion tracker that encourages members to finish their identity without changing the familiar settings workflow.
+- Made web addresses in profile bios—including NeonChat sub-domains such as kluma.neonchat.co—safe, clickable links in both the profile drawer and full profile.
+- Introduced a custom NeonChat Partner crest that is granted automatically to owners and administrators of partnered communities, can be shown or hidden in My Account, and now appears consistently in the bottom user bar, member roster, profile drawer, and full profile.
+- Special-cased neonchat-main as required platform membership: new accounts are enrolled automatically, AuroraNexus delivers the configured welcome once, direct server-leave attempts are blocked, and account deletion triggers the configured goodbye before membership cleanup.
 
 ## Android Download + Mobile Drawer Repair
 
