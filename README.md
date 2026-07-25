@@ -6,6 +6,20 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## Mobile 1.0.39 Debug + Play Store Readiness
+
+**July 25, 2026** · Android, Mobile UX & Release Engineering
+
+- Built and published a fresh debug-signed NeonChat 1.0.39 APK for direct Android testing, with package identity tv.teammidnite.neonchat, version code 39, target API 35, signature verification, and a downloadable SHA-256 checksum.
+- Made the Android Back button close the topmost profile drawer, context menu, Settings panel, full profile, Server Overview, Partner welcome, mobile navigation drawer, voice room, or DM view before it exits NeonChat.
+- Added Nyx-branded offline and reconnecting notices so interrupted connections explain what is happening without removing the member from their current screen.
+- Expanded coarse-pointer touch targets across profile, settings, modal, and partnership actions for more comfortable one-handed use.
+- Hardened the Android wrapper by disabling cleartext traffic and device backup of NeonChat session data.
+- Separated debug distribution from Google Play releases: debug builds can be published to neonchat.co, while release APKs and App Bundles now fail closed unless versions, target API policy, and permanent upload signing are valid.
+- Added a protected manual GitHub workflow that can build a signed Android App Bundle and upload it to Internal, Alpha, Beta, or Production in Google Play once the Play service account, upload key, and owner-approved google-play environment are configured.
+- Added a date-aware Play preflight that accepts API 35 now but automatically blocks submissions that have not moved to API 36 by Google’s August 31, 2026 requirement.
+- Pinned Android packaging to JDK 17 so host Java upgrades cannot silently break debug or Play builds.
+
 ## Member Signals + Profiles, Partners & Server Identity
 
 **July 25, 2026** · Community, Profiles, Partners & Server Identity
