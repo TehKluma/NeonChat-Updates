@@ -6,6 +6,16 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## Member Signal Actions + Leadership Presence
+
+**July 25, 2026** · Community & Presence
+
+- Added NeonChat-native Signal Actions to human member rows: right-click on desktop or long-press on mobile to View Signal, Open Direct Line, Copy Handle, or Copy Signal ID.
+- Kept bots, verified bots, Nyx, and system accounts outside the human-member action menu.
+- Gave Owner tehKluma and Co-Owner WhovianWarrior distinct leadership styling and an Open Support shortcut, while also recognizing server-owner and Co-Owner role data automatically.
+- Fixed connected presence in the member roster so a custom status no longer hides the active Spotify song or Steam game; all available activity lines can now appear together.
+- Restored direct-message launching from the member profile drawer by connecting it to the main NeonChat conversation flow.
+
 ## Android Download + Mobile Drawer Repair
 
 **July 24, 2026** · Android App & Mobile Layout
