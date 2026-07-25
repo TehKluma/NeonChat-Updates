@@ -6,15 +6,21 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
-## Member Signal Actions + Leadership Presence
+## Member Signal Actions + Server Overview Facelift
 
-**July 25, 2026** · Community & Presence
+**July 25, 2026** · Community, Presence & Server Identity
 
 - Added NeonChat-native Signal Actions to human member rows: right-click on desktop or long-press on mobile to View Signal, Open Direct Line, Copy Handle, or Copy Signal ID.
 - Kept bots, verified bots, Nyx, and system accounts outside the human-member action menu.
 - Gave Owner tehKluma and Co-Owner WhovianWarrior distinct leadership styling and an Open Support shortcut, while also recognizing server-owner and Co-Owner role data automatically.
 - Fixed connected presence in the member roster so a custom status no longer hides the active Spotify song or Steam game; all available activity lines can now appear together.
 - Restored direct-message launching from the member profile drawer by connecting it to the main NeonChat conversation flow.
+- Modernized Server Overview without replacing its familiar structure: the banner and overlapping server icon remain, now joined by a stronger identity header, tagline, Verified/Partnered/Public status badges, and live Members, Online, Channels, and Events cards.
+- Added a dynamic Signal from Nyx introduction that uses the real server description, membership count, verification state, and Partner uplink status.
+- Rebuilt rules, community links, creation metadata, and the Server Settings footer as spacious neon cards with distinct cyan, violet, purple, and pink accents.
+- Upgraded the Twitch calendar into date-led event cards with schedule times, host names, profile images, and truthful View on Twitch actions sourced from the authenticated 14-day community schedule.
+- Added a responsive full-screen mobile Server Overview and corrected the banner overlap so the server icon and name remain fully visible instead of being clipped by the scroll container.
+- Connected partnerlounge.neonchat.co directly to the private NeonChat Partner Lounge with an exact Apache route, active server mapping, valid Let’s Encrypt certificate, Cloudflare delivery, and hostname-preserving NeonLogin callback.
 
 ## Android Download + Mobile Drawer Repair
 
