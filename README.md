@@ -6,6 +6,23 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## Desktop 1.0.39 + Mobile Settings & Chat Polish
+
+**July 25, 2026** · Desktop, Mobile UX, Messaging & Reliability
+
+- Released NeonChat Desktop 1.0.39 through the Windows download and automatic-update channels, while retaining 1.0.38 as a rollback build.
+- Rebuilt mobile Settings as a compact, native-style hub with account identity first, searchable User Settings, App Settings, and Safety sections, clearer navigation rows, and the member’s selected NeonChat color theme carried throughout the experience.
+- Remade My Account for mobile with a focused profile hero, compact identity and Partner signals, editable profile fields, grouped profile media, NeonLogin access, support actions, and a clearly separated account-management danger zone.
+- Remade Connections and the remaining mobile settings pages with consistent grouped rows, touch-friendly controls, device selectors and tests, theme choices, notification and privacy controls, reports, and purposeful empty states; mobile-only navigation also hides desktop Keybinds.
+- Improved channel navigation with a distinct active state, subdued read channels, visible unread and mention counts, keyboard-accessible rows, and clearer accessibility labels.
+- Stopped mobile server changes from automatically selecting a dock destination: Home, Friends, and You now become active only after the member chooses them.
+- Raised text-channel image posts to 10 images per message, added multi-select and multi-paste attachment previews with individual removal, preserved all uploaded image metadata through realtime delivery and history, and rendered responsive in-message galleries.
+- Removed the mobile composer auto-focus that reopened the keyboard after changing channels and tightened viewport/composer behavior so the keyboard no longer leaves a giant dead gap beneath the message box.
+- Added a Nyx-branded loading state while channel history is syncing; it disappears as soon as messages arrive or access is resolved.
+- Shortened the Help Center hero to “Learn NeonChat” and moved the Discord comparison into supporting copy for faster mobile scanning.
+- Fixed a desktop startup navigation race that could turn a harmless interrupted data-page load into an enormous encoded crash screen.
+- Upgraded Nyx crash recovery with bounded human-readable details, Retry and Service Status actions, stale deployment-chunk recovery, retained hashed assets for open desktop clients, and automatic redaction and truncation of sensitive or oversized log values.
+
 ## Frontend Crash Guard + Nyx Recovery
 
 **July 25, 2026** · Reliability & Mobile Stability
