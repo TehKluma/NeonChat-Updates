@@ -6,6 +6,15 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## Profile Badges in Channel Chat
+
+**July 29, 2026** · Member Identity & Chat
+
+- Added profile badges beside member names in channel-chat message headers so identity signals remain visible during conversations.
+- Displays up to three badges per member while preserving their assigned badge order.
+- Always places the official NeonChat Partner crest first when the member has chosen to display it.
+- Kept verified-bot markers separate and added compact badge sizing, accessible labels, hover titles, and mobile-friendly spacing.
+
 ## Faster Desktop DM Composer
 
 **July 29, 2026** · Direct Messages & Desktop Reliability
