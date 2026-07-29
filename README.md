@@ -6,6 +6,16 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## Faster Desktop DM Composer
+
+**July 29, 2026** · Direct Messages & Desktop Reliability
+
+- Removed the global direct-message sending lock that made the desktop composer feel stuck while it waited for a server acknowledgement.
+- Text drafts now clear from the composer as soon as their pending message appears, so members can immediately type and send the next message.
+- Kept simultaneous text sends independent while retaining dedicated protection against duplicate image uploads.
+- Failed sends safely return their text to the active conversation composer instead of silently losing the draft.
+- Published the fix through the hosted NeonChat experience used by the Windows app, so no replacement desktop installer is required.
+
 ## Instant DMs + Restored Android Notifications
 
 **July 29, 2026** · Messaging Performance & Android Reliability
