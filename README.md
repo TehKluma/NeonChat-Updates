@@ -6,6 +6,49 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## Android 16 Readiness + Native Mobile Notifications
+
+**July 29, 2026** · Android 1.0.50, Notifications & Mobile Reliability
+
+- Prepared NeonChat Android 1.0.50 with version code 50, compile and target API 36, Android Gradle Plugin 8.9.1, and Gradle 8.11.1 so the next Google Play update meets the Android 16 requirement.
+- Added native Android notifications for direct messages and mentions, including Firebase delivery while the app is closed, conversation-aware notification routing, notification channels, vibration, and launcher badge counts.
+- Added authenticated Android device registration and logout cleanup, with stale or invalid push tokens removed automatically and private Firebase service-account credentials kept outside the repository.
+- Added notification permission handling, a native notification diagnostic, and a shortcut to NeonChat’s Android notification settings so members can test and repair notification access directly from Settings.
+- Made notification taps deep-link into the correct direct message, server, or channel and clear conversation notifications as members return to the relevant chat.
+- Restored the full mobile inactive roster: the Who’s Online deck now lists every offline member and offline bot instead of displaying only an inactive count.
+- Built and verified a signed Android 1.0.50 App Bundle with the production package identity, target API 36, and the existing NeonChat upload certificate.
+
+## User Blocking + Stronger Privacy Controls
+
+**July 29, 2026** · Safety, Privacy & Account Controls
+
+- Added Block User and Unblock User actions to member profiles, backed by authenticated server APIs and persistent per-account block lists.
+- Added a Blocked Users manager under Privacy Settings with member identity, avatar, and one-tap unblocking.
+- Disabled direct-message sending to accounts you have blocked and added a clear explanation in the conversation composer until the account is unblocked.
+- Included blocked-user state in the signed-in account response so profile and messaging controls stay consistent across the app.
+- Clarified that NeonChat is intended for members age 16 and older, with guardian supervision required for minors where applicable.
+- Clarified that supporter tiers and Ko-fi subscriptions are optional and are not required to use NeonChat’s core platform features.
+
+## Creator Live Cards + Better Invite Sharing
+
+**July 29, 2026** · Streaming, Bots, Invites & Discovery
+
+- Redesigned automated Twitch announcements as rich Neon Signal live cards with creator identity, stream title, game, viewer count, uptime, team category, thumbnail, Watch, Profile, and Share actions.
+- Expanded MidniteBot live monitoring across Team Midnite, The Enchanters, and The Beanary, merging duplicate creator records when a streamer appears in more than one team feed.
+- Preserved structured live-stream metadata through realtime message updates and cached channel history so stream cards remain consistent without duplicate announcement posts.
+- Added dedicated Open Graph and X/Twitter metadata, a new NeonChat social image, canonical URLs, and improved search descriptions for cleaner link previews across social platforms.
+- Added server-aware invite previews that include the community name, description, member count, and a dedicated invite card when invite links are shared.
+- Updated generated and copied invite links to use the current preview-card version while preserving normal in-app joining behavior.
+
+## Voice Signal Detection + Mobile Polish
+
+**July 29, 2026** · Voice, Presence & Reliability
+
+- Improved voice activity detection by combining frequency and time-domain audio levels, making speaking indicators respond more reliably to normal microphones and quieter voices.
+- Added safer AudioContext recovery for suspended or replaced audio sessions and guarded MediaStream setup so a failed stream cannot break the rest of the voice room.
+- Reduced unnecessary speaking-state updates while retaining a short release delay that prevents the indicator from flickering between words.
+- Kept mobile notification badges, unread conversations, and active-chat clearing synchronized across foreground, background, and closed-app message delivery.
+
 ## Desktop 1.0.39 + Mobile Settings & Chat Polish
 
 **July 25, 2026** · Desktop, Mobile UX, Messaging & Reliability
