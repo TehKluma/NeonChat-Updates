@@ -6,6 +6,18 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## Instant DMs + Restored Android Notifications
+
+**July 29, 2026** · Messaging Performance & Android Reliability
+
+- Made outgoing direct messages appear immediately with a brief Sending state instead of waiting for server acknowledgement before rendering.
+- Moved optional Twitch and custom-emote enrichment off the critical DM delivery path, so catalog lookups can no longer delay message persistence, broadcast, or acknowledgement.
+- Added nonce-based reconciliation so confirmed messages replace their temporary bubbles cleanly without duplicates, while failed sends remove the pending bubble and show a clear error.
+- Protected in-flight messages from conversation-history refreshes so a send cannot briefly disappear while the thread is synchronizing.
+- Fixed an Android background-delivery dead zone where a lingering app socket incorrectly suppressed Firebase notifications after Android had suspended the WebView.
+- Android message and mention pushes now reach every registered device regardless of desktop or background socket presence, while the app suppresses duplicate local notifications when Firebase registration is active.
+- Verified the production Firebase path against the registered Android device with one successful diagnostic delivery and no failures.
+
 ## Android 16 Readiness + Native Mobile Notifications
 
 **July 29, 2026** · Android 1.0.50, Notifications & Mobile Reliability
