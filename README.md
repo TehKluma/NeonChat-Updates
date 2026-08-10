@@ -6,6 +6,19 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## Square Subscriptions + Premium Themes & Chat Polish
+
+**August 10, 2026** · Subscriptions, Themes, Streaming & Messaging Reliability
+
+- Launched a dedicated NeonChat Subscriptions center with a clear access summary, side-by-side Nexus Plus and Nexus Pro tiers, a separate Custom Sub-Domain add-on, account-aware billing status, and Partner benefits shown as included with no charge.
+- Moved production checkout from Ko-fi to Square for the Custom Sub-Domain Plan ($5/month), Nexus Plus ($7/month), and Nexus Pro ($10/month), replacing every customer-facing legacy checkout link across Settings, Server Settings, Services, Nexus, and premium-theme upgrade actions.
+- Connected Square Production plans and variations to NeonChat, added exact raw-body HMAC webhook validation, narrowed delivery to subscription lifecycle events, stored events idempotently, matched Square customers by account email, and enabled automatic Subscriber and premium-theme access for active subscriptions.
+- Added ten Nexus premium themes—Aurora, Night City, Deep Space, Synthwave, Cherry Noir, Evergreen, Arctic, Ultraviolet, Coffeehouse, and Prismatic—with entitlement enforcement for Nexus subscribers and complimentary Partner access.
+- Expanded the Nexus Plus and Nexus Pro cards with interactive theme previews, made premium themes explicit on both tiers, strengthened Prismatic’s animated color treatment, and safely restores the member’s saved theme after a temporary preview.
+- Removed the duplicate legacy Memberships & Billing and Ko-fi synchronization panel from Connections so subscriptions, products, billing, and payment management have one deliberate home.
+- Stopped channel changes from forcing the message list back to the bottom after a member begins scrolling upward, preserving their reading position during rapid channel switching and history review.
+- Gave Lil_Lexi stream announcements a dedicated black-and-red creator treatment with colorful live-camera accents inside the owner community only.
+
 ## Profile Badges in Channel Chat
 
 **July 29, 2026** · Member Identity & Chat
