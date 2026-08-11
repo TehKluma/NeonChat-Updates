@@ -6,6 +6,16 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## Terms & Privacy Updated for Square Billing
+
+**August 10, 2026** · Legal, Privacy & Subscription Transparency
+
+- Updated the Terms of Service to identify Square as NeonChat’s current subscription checkout and payment processor and to explain recurring billing, cancellation, entitlement status, and the continued availability of core features.
+- Expanded the Privacy Policy with the specific Square customer, subscription, plan, account-matching, status, and webhook records NeonChat uses to administer paid access.
+- Clarified that complete payment-card numbers and card security codes stay with Square-hosted checkout and are not received or stored by NeonChat.
+- Documented Square-related data sharing, billing-record retention, subscription choices, and the limited retention of legacy Ko-fi records for support, audit, disputes, and entitlement continuity.
+- Added direct links to Square’s legal and customer privacy notices and set both NeonChat policies’ effective date to August 10, 2026.
+
 ## Square Subscriptions + Premium Themes & Chat Polish
 
 **August 10, 2026** · Subscriptions, Themes, Streaming & Messaging Reliability
