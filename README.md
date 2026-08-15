@@ -6,6 +6,17 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## Native Stream Team Architecture + Category Drag & Smooth Loading
+
+**August 15, 2026** · Stream Team Communities, Sidebar Reordering & Loading Polish
+
+- Rebuilt Team Midnite into a native NeonChat Stream Team server with dedicated sections for creator collaboration, stream announcements, community hubs, and staff operations.
+- Added permanent, rich community presentation in #about-team-midnite and #join-the-team with streamlined application routing directly into the recruitment pipeline.
+- Revamped server category drag-and-drop: categories and all attached channels now move atomically with real-time insertion feedback and immediate multi-client persistence.
+- Optimized channel loading: introduced a smooth 240ms threshold that eliminates the Nyx loader flicker when opening fast or empty channels while preserving loading feedback for slower networks.
+- Upgraded support ticket email routing with server-scoped controls, keeping Team Midnite staff ticket notifications in-app under #logs without defaulting to personal owner emails.
+- Verified Community Partnership for The Vortex alongside KeplerXG and NexusNiall, unlocking Partner Lounge access, custom emotes, and premium themes.
+
 ## Terms & Privacy Updated for Square Billing
 
 **August 10, 2026** · Legal, Privacy & Subscription Transparency
