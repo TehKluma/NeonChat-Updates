@@ -6,6 +6,37 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## NeonChat Beta Architecture Overhaul: Discord Message Actions, Real-Time Emotes & Mobile Suite
+
+**August 17, 2026** · Message Actions, Emote Engines, DMs & Responsive Architecture
+
+- Introduced Discord-style Message Action Context Menu with quick reactions, inline message editing, threaded replies, copying text/IDs/media links, and instant channel message deletion.
+- Overhauled full Emote Resolution & Catalog pipeline: aggregated Twitch Global & Channel emotes, BTTV, FFZ, Velora, and message-level resolvedEmotes with instant high-DPI inline rendering.
+- Added rich animated GIF and media embed rendering for Tenor, Giphy, and direct media URLs directly below message text.
+- Rebuilt full Mobile Responsive Navigation: sidebars slide smoothly as touch-dismiss overlay drawers with mobile header hamburger controls and single-line channel headers.
+- Shipped complete Direct Messaging (DM) view on Beta with full conversation history, real-time message events, and fluid mobile thread navigation with back transitions.
+- Launched native Server Creation, Invite Joins, and Community Discovery modal with public server directory.
+- Crafted custom high-res cyberpunk Partner Lounge artwork and configured optimized server banner delivery across all endpoints.
+
+## Spotify Presence Streamlined + Profile Studio Banner Upgrades
+
+**August 17, 2026** · Media Presence, Profile Studio & Cross-Environment Asset Polish
+
+- Overhauled Spotify presence to be strictly content-driven: removed the empty "Spotify connected" placeholder card so Spotify only appears on profiles and drawers when there is an active or paused track to share.
+- Added paused playback awareness: if playback is paused while a song is active, the track remains visible with a clear "Paused" badge rather than abruptly vanishing or collapsing into an empty placeholder.
+- Preserved clean DOM layouts: when playback stops or no session is active, the entire Spotify card and container section unmount cleanly with zero empty whitespace or CSS ghost containers.
+- Synchronized official artwork profile banners (Nyx Realm, Midnight Streets, Neon City) with canonical asset routing across Live and Beta environments for reliable loading everywhere.
+- Kept connection status strictly in Settings → Connections so personal profiles focus on live community identity and presence.
+
+## NeonChat Mobile — Alpha Testers Wanted!
+
+**August 16, 2026** · NeonChat Mobile App Alpha & Testing Kickoff
+
+- NeonChat has a mobile app! We are opening up the Alpha testing build to put it through proper testing before a wider release.
+- We are looking for testers to use NeonChat on mobile regularly, find bugs/crashes, test servers, channels, DMs, voice & notifications, and share honest feedback.
+- Dedicated #announcements channel created in the official NeonChat server in its own category to track mobile updates and alpha coordination.
+- Help shape NeonChat Mobile — let us know in #announcements or DMs if you are interested in becoming a tester!
+
 ## Native Stream Team Architecture + Category Drag & Smooth Loading
 
 **August 15, 2026** · Stream Team Communities, Sidebar Reordering & Loading Polish
