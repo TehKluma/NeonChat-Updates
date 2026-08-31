@@ -6,6 +6,144 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## DeepFilterNet3 AI Neural Noise Suppression & Platform Stability Suite
+
+**August 30, 2026** · AI Audio Processing, DeepFilterNet3, Message Reliability, Null-Safety & Mobile Polish
+
+- Integrated client-side DeepFilterNet3 AI Neural Noise Suppression into voice channels and DM calls (shoutout to Sage at Velora.tv for bringing DeepFilterNet3 to the team’s radar!), completely eliminating mechanical keyboard clicks, HVAC rumble, and background room noise in real time.
+- Added DeepFilterNet3 controls in Settings → Voice & Audio, allowing members to toggle neural suppression on/off and fine-tune suppression intensity from 0% to 100% (defaults to 85%).
+- Engineered AudioWorklet-based off-thread WebAssembly SIMD processing so neural noise filtering runs with zero frame drops or UI lag in the client.
+- Hardened message delivery ACK reconciliation to eliminate ghost messages and race conditions during socket reconnection and network latency.
+- Added comprehensive null-safety guards across real-time user profiles, role badges, voice roster states, and DM snapshots to eliminate client-side unhandled runtime crashes.
+- Polished mobile keyboard focus transitions and viewport layout stability on Android WebView (Capacitor) and mobile web browsers.
+- Maintained synchronized API and socket event contracts across Live and Beta platforms.
+
+## Support That Connects, Templates That Travel & a Proper Bug Smash
+
+**August 26, 2026** · Unified Support, Feature Requests, Server Templates, Mentions, Identity & Reliability
+
+- Connected the Main and Beta support systems into one authorized staff queue, with source labels, full conversation history, assignment and status controls, authenticated attachment previews, and reliable image or file downloads.
+- Support activity now travels through NeonChat direct messages: staff can receive new-ticket and requester-reply alerts, while members receive staff-response updates in the same messaging side they already use.
+- Added Feature Requests directly beside Support Queue and My Tickets. Members can submit and vote on ideas, while authorized staff can review them, update roadmap status, choose a category, and publish a response.
+- Protected NeonChat identity during account linking: the existing NeonChat profile stays canonical, linked NeonLogin and Twitch identities remain provider metadata, and profile details, appearance, settings, and existing conversations are preserved.
+- Added additive Discord and Root / NeonChat server template import plus NeonChat JSON export. Templates can be applied during server creation or afterward, preserve existing channels, map roles and compatible permissions, assign fresh IDs on collisions, and report anything that needs manual follow-up.
+- Restored member mention autocomplete in Beta and added permission-aware @everyone and @here broadcasts, with server-side enforcement so the composer cannot grant itself permission.
+- Tightened server and staff privacy across settings controls, recruitment/application routing, support visibility, Nexus administration, affiliate identity tools, and private user clipboards without taking away legitimate voice-channel indicators.
+- Improved Developer Bot bridging so canonical bots such as Sage can keep their proper NeonChat identity and participate through the authorized message pipeline without borrowing a member account.
+- Smashed a pile of bugs, polished the chat and DM experience, and apparently dropped a few frames in somebody’s backyard over on Velora. Kidding, kidding — no frames were actually abandoned.
+
+## Control Center, Richer Profiles & a More Personal NeonChat
+
+**August 25, 2026** · Admin Operations, Social Profiles, Games, DM Hub, Themes, Spotify, Maintenance & Voice Routing
+
+- Launched the native Admin Control Center for authorized staff, bringing platform overview, user and server management, moderation, support, partnership reviews, notifications, audit history, operational tools, and responsive system-health monitoring into one permission-gated workspace.
+- Added platform-wide maintenance controls with live status updates, a dedicated Nyx maintenance experience for members, and a safe staff bypass and preview flow that always returns to Beta.
+- Expanded member profiles with editable social links and game collections: members can add supported creator and social identities, search for games, curate their collection, and show both in full profiles and compact self-profile views.
+- Rebuilt the Direct Messages home into real Friends, Nitro, Shop, and Quests destinations with route-aware navigation, while preserving individual conversations and making trailing-slash and refresh behavior predictable.
+- Expanded the theme engine with shared design tokens across free and Nexus themes, added OLED and new premium looks including Solaris, and tightened Partner and subscription entitlement handling so previews and saved themes resolve consistently.
+- Brought Spotify account management directly into Beta with PKCE authorization for authenticated members and fresher presence resolution, so current listening activity wins over stale profile snapshots and cleared playback stays cleared.
+- Made voice routing enforce the selected relay path instead of acting like a cosmetic preference: Auto can use West, East, Team Midnite, or the Alpha Cloudflare fallback, explicit regions remain pinned, and diagnostics expose only safe connection details.
+- Added token-driven Prismatic voice visuals that react to active speakers, respect reduced-motion preferences, and keep voice presentation aligned with the selected app theme.
+
+## Admin Stays Where You Left It + Identity & Platform Polish
+
+**August 24, 2026** · Route-Intent Admin, Cleaner Docks & Profiles, Live Avatars, Platform Feeds & More
+
+- Fixed Admin Control Center hijacking normal refreshes: being Admin, Staff, or Moderator is now permission to open the portal, never a default destination. The portal opens only when you explicitly visit /admin or complete a login that started there, and every temporary admin-return marker is consumed and cleared after use — refreshing #general stays in #general, and refreshing /admin stays in the Control Center.
+- Decluttered the bottom-left account dock: your avatar, name, and a single primary identity badge (Partner crest first, then your selected earned badge) sit in one clean horizontal row with your custom status below, and the Admin shield and Settings gear are now matched, compact buttons on the far right — no more badge cluster crowding the panel.
+- Moved presence controls (Online / Idle / Busy / Hidden plus the busy-timing selector) near the top of your own profile card, directly beneath social links, so account state no longer hides below Games and Member Since; other members’ profiles are untouched.
+- Partnered servers now show the official NeonChat Partner crest directly beside the server name in the channel sidebar header — separate from the Verified shield, read live from the server’s Partner state, with an Official NeonChat Partner tooltip.
+- Members without a profile picture now get a colorful Neon-styled DiceBear rings avatar instead of the old gray placeholder, resolved server-side wherever avatars are shown — including chat, member lists, profiles, and admin views.
+- Fixed stale avatars in historical messages and DMs: messages now resolve the author’s current profile picture from their userId at render time (with the message snapshot only as a last-resort fallback), and profile/avatar changes propagate instantly to visible messages and DM entries — no migration of old message records.
+- The member-rail toggle (people icon next to NEON SIGNAL) now actually works on desktop: one click collapses the member rail and expands chat, another restores it at its previous width, with Show/Hide tooltips, an active state, and the preference remembered across navigation and refresh.
+- Platform notification channels now wear their own brand: #live-on-velora shows the official gold Velora mark and #live-now-twitch shows the official Twitch glitch — in both the channel rail and the channel header, using one shared resolver so the two can never drift apart.
+
+## Native Video & Screen Share Arrive in Voice Channels
+
+**August 19, 2026** · Cameras, Screen Sharing, Focus & Grid Views on the Neon Signal
+
+- Turn on your camera from inside any voice room without leaving it: join audio-only and enable/disable video at any time, with a dedicated camera toggle, device picker, and flip-camera control on mobile.
+- Screen sharing via native WebRTC getDisplayMedia: share your entire screen, an application window, or a browser tab with presentation view, fullscreen, stop-share, and a dedicated stream so camera and screen run simultaneously.
+- The voice area transforms into a responsive neon video surface when anyone is on camera: automatic participant grid, click-anyone-to-focus with a return-to-grid control, and speaking / muted / deafened / camera-off indicators with avatar fallbacks.
+- Camera and microphone access stay strictly opt-in and permission-gated: a denied or missing camera never kills the voice session, and stopping video actually stops and removes the outgoing track.
+- Video quality adapts to your connection from WebRTC statistics (720p → 480p → 360p), and screen shares prioritize readable detail at a capped frame rate — voice quality always wins.
+- Leaving voice tears down every audio, video, and screen-share track, every peer connection, and every device capture — no zombie camera indicators, with sidebar badges syncing camera and screen state in real time.
+
+## Navigation That Remembers, F5 That Works & Jump-to-Latest
+
+**August 19, 2026** · Per-Server Navigation Memory, Scroll Restoration, Jump Pill & Identity Polish
+
+- Discord-style navigation persistence: Beta now remembers the last server and the last channel inside every server independently, restores them on refresh and relaunch, and never lets transient loading states, server-list changes, or fallback selections silently overwrite your remembered location.
+- F5 finally lands you where you left off: refresh or reopen a channel and the app restores the same server and channel, then scrolls straight to the newest messages — while welcome cards, verification panels, images, embeds, and live cards loading above the stream can no longer push the viewport up into old history.
+- Added a NeonChat-styled Jump-to-Latest pill that appears when you scroll up from the newest messages, shows how many messages arrived while you were away (capped at 99+), and returns you to the bottom with one click — staying pinned there until you choose to scroll up again.
+- Hardened Beta against automation side effects: a server-side environment guard freezes Beta bot workers and pollers so Beta cannot originate live notifications, welcome messages, role automation, or other bot actions against shared data, while still displaying canonical Live messages.
+- Standardized identity badge ordering across the member rail, message headers, profiles, and DMs as username → server tag → partner badge → optional badges, and fixed optional badges being pushed to the far edge of the rail so badges stay grouped with the username.
+- Made the Verification & Rules channel-access panel content readable at full width: real desktop typography, proper spacing, and a prominent Agree & Verify action instead of tiny embed-sized text floating in a wide panel.
+
+## Beta Custom Emote Engine Overhaul, Shift+Click Multi-Select & Announcement Bot Routing
+
+**August 18, 2026** · Custom Emote Resolution, Multi-Select Picker, Overlay Safeguards & Notification Bot Routing
+
+- Overhauled Custom Emote Path Resolution: normalized stored and incoming asset URLs to absolute API paths, resolving intermittent 404 image load failures for custom server emotes.
+- Canonical Emote ID Lookup: custom emotes now resolve by stable emoteId and code against the active server emote registry, retaining full backward-compatible fallback for legacy message references.
+- Graceful Emote Failure Handling: broken emote loads fail individually without breaking surrounding text or displaying broken-image browser icons, rendering clean :emoteCode: fallbacks with Beta diagnostic logging.
+- Shift + Click Multi-Select: holding Shift while selecting emotes, emojis, or GIFs in the composer picker keeps the menu open so users can insert multiple items continuously.
+- Enhanced Picker Focus & DOM Safeguards: added auto-focus for search inputs and protected all overlay component listeners (Emote Picker, Media Picker, Profile Popovers, Context Menus) against unmounted DOM node closures.
+- Per-Server Live Notification Bot Identity Routing: server managers can select custom announcement bot identities in Server Settings → Live Notifications, with TehKluma's Armory automatically posting announcements via the canonical DontBlameLexi bot identity.
+- Server-Side Security Validation: restricted notification bot selection to verified member bots of the server plus AuroraNexus, blocking bot spoofing attempts.
+
+## AuroraNexus Stream Team Verification Completed on Beta
+
+**August 18, 2026** · Velora Identity, Live Roster Verification & Native Role Claims
+
+- Fixed the empty AuroraNexus channel feature shell by adding Beta support for the native Velora Stream Team gate returned by the shared backend.
+- Added Connect Velora, Verify & Claim Role, checking, error, and verified states directly to managed verification channels.
+- Added Velora identity and emote syncing to Control Deck → Connections using the existing shared NeonChat account connection endpoint.
+- Kept profile data isolated: connecting Velora updates only the linked Velora identity fields, while AuroraNexus role assignment remains server-scoped.
+- Added responsive, readable Stream Team cards with team, handle, target-role, and completion context instead of a blank management bar.
+
+## Spotify Connection Visibility Arrives in Beta
+
+**August 18, 2026** · Shared Accounts, Listening Presence & Safe Data Parity
+
+- Added Spotify to the Beta Control Deck with connection status sourced from the same NeonChat account used by Live.
+- Added a compact now-playing view for active or paused Spotify presence, including album artwork and a safe link to the track when available.
+- Kept Spotify authorization management on Live during the alpha so Beta never creates duplicate connection records or replaces existing profile data.
+- Added an in-place status refresh so users can return from Live and see their existing Spotify connection without signing out or reloading Beta.
+
+## Voice & Video Calls Arrive in Beta DMs
+
+**August 18, 2026** · WebRTC Calling, Global Incoming Calls & Media Controls
+
+- Added one-to-one voice and video call buttons directly to every Beta DM conversation header.
+- Connected Beta to NeonChat’s existing production DM call signaling so calls interoperate with members using Main.
+- Added global incoming-call presentation across server and DM views with accept, decline, busy, offline, timeout, and remote-end handling.
+- Added secure microphone and camera capture, production ICE/TURN configuration, WebRTC offer/answer negotiation, and queued ICE candidate delivery.
+- Added responsive call stages with remote video, local camera preview, voice-call identity presentation, mute, camera, and hang-up controls.
+- Added camera-unavailable voice fallback and clear media permission or connection errors without leaving stale call sessions behind.
+
+## Beta DMs, Reliable Unread Signals & Channel Categories
+
+**August 18, 2026** · Direct Messages, Notifications & Server Navigation
+
+- Capped large DM image attachments to compact 360 × 280 previews while preserving their original aspect ratio.
+- Aligned Beta direct messages with the production new-dm, dm-notification, join-dm, and dm-read event contracts so live delivery and read acknowledgements work consistently.
+- Added persistent unread counters for direct messages, servers, channels, and mentions, with immediate clearing when the relevant conversation becomes visible.
+- Made visible desktop notifications close when their conversation is read and deduplicated overlapping server notification events.
+- Restored Main-style channel categories in Beta with collapsible groups, mixed text, announcement, and voice channels, plus safe uncategorized fallbacks.
+- Added regression coverage for DM read state, notification routing, category normalization, responsive media, and navigation badges.
+
+## Beta Chat Recovery: Messages, Emotes, GIFs & Mobile Layout
+
+**August 17, 2026** · Regression Recovery & Android Beta Stabilization
+
+- Restored normal chat message-row sizing so long channels scroll correctly instead of compressing avatars, text, and emotes into overlapping rows.
+- Restored rich message formatting for headings, emphasis, lists, quotes, code, spoilers, links, embeds, attachments, badges, and avatar fallbacks.
+- Restored the complete emote picker with Twitch, subscriber, server, Velora, BTTV, FFZ, 7TV, and standard emoji tabs.
+- Restored Giphy search, trending GIFs, category browsing, safe picker interactions, and mobile safe-area positioning.
+- Corrected channel history requests, full member-roster loading, server icon rendering, mobile navigation drawers, profile popover containment, and oversized media behavior.
+- Added integration regression coverage for message-renderer wiring, chat-row sizing, emote/GIF picker availability, API contracts, mobile layout, presence compatibility, and control-deck accessibility.
+
 ## NeonChat Beta Architecture Overhaul: Discord Message Actions, Real-Time Emotes & Mobile Suite
 
 **August 17, 2026** · Message Actions, Emote Engines, DMs & Responsive Architecture
