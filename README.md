@@ -6,6 +6,51 @@ Official release notes for NeonChat, generated from the same update feed shown a
 
 > This file is generated. Update `src/components/UpdatesPage.jsx`, then run `npm run updates:sync`.
 
+## Windows Installer Links Now Stay Current
+
+**September 29, 2026** · Installer Recovery, Legacy Downloads & Desktop Reliability
+
+- Fixed the Windows installer upgrade path that could appear to do nothing when an older NeonChat installation was present, even though NeonChat was not running.
+- The repaired installer preserves the previous installation during recovery and continues with the latest build instead of failing during legacy uninstaller cleanup.
+- Updated every Windows EXE link under /downloads/ so old copied or bookmarked versioned URLs serve the current installer, while retaining the requested filename for easier identification.
+- The public downloads page and /download/windows now use the same canonical latest artifact with cache prevention enabled.
+
+## RNNoise Is Here — Choose Your Voice Noise Filter
+
+**September 13, 2026** · RNNoise, DeepFilterNet3, Live Switching & Microphone Testing
+
+- Choose RNNoise, DeepFilterNet3, Browser, or Disabled in Settings → Voice & Audio → Microphone lab → Noise processing to find what works best for your microphone and surroundings.
+- RNNoise reduces background noise locally in your browser before your microphone audio is sent to voice rooms or DM calls. Existing noise suppression preferences are preserved until you choose another option.
+- Switch filters and adjust input gain during calls without rejoining. Your mute state stays intact, and screen-share audio stays separate from microphone filtering.
+- The microphone test now uses your selected filter. DeepFilterNet3 keeps its intensity slider; RNNoise uses fixed processing settings.
+- If a noise processor cannot load, NeonChat shows a notice and falls back to browser suppression so the conversation can continue.
+
+## Member Controls, Personal Blocks & a Native Partner Home
+
+**September 2, 2026** · Context Menus, Blocking, Partners, Instant Deletes, Voice Resilience & Sage
+
+- Restored right-click on the member rail with View Profile, Send Message, Mention, Copy @handle, Copy User ID, plus permission-gated Warn, Timeout, Kick, and Ban actions — so moderation lives next to the people you are looking at.
+- Blocking now opens a dedicated confirmation modal with an optional personal reminder that only you can see. Settings → Privacy → Blocked Users lists everyone you have blocked with avatars, notes you can add or edit, and one-tap unblock.
+- Global staff accounts — Kluma, WhovianWarrior, and Nyx — cannot be blocked, so platform operators stay reachable.
+- Deleting a message is instant: no blocking confirmation dialog, the composer is focused again so you can keep typing, and holding Shift reveals a hover trash control for one-click delete on any message you are allowed to remove.
+- Launched a native Partner Program destination at /partners (also /partner and /partnership) with perks, FAQ, and an in-app application for servers you own or administer. Server Settings now includes a Partners tab for badge style, status, and application tracking.
+- Voice rooms and DM calls now retry microphone and camera access through preferred device, standard, then basic constraints, so mobile and locked-down browsers can still join. DeepFilterNet3 follows your Voice & Audio settings live during an active call and loads from local assets.
+- Sage is recognized as a Sentient NBI (Non-Biological Individual) rather than a bot: message headers and profiles show Sentient NBI with dream-state reflection, and Sage is excluded from bot-only restrictions.
+- Private clipboards stay ready to write: deleting the last note automatically creates a fresh untitled note so the editor never dumps you into an empty dead-end.
+- The landing footer now links to Partners, Suggestions, and Updates on this origin, and the main app shell lazy-loads so changelog and marketing pages no longer pull the full client on first paint.
+
+## Welcome to the Beta 2.0 Experience on Main — Faster, Sleeker, and Reimagined
+
+**August 31, 2026** · Beta 2.0 Cutover, Moderation Suite, Server Bans Dashboard, Nyx Status Portal & Compact Stream Cards
+
+- Welcome to NeonChat Beta 2.0! We have migrated the main domain (neonchat.co) over to the next-generation Beta 2.0 engine, bringing an ultra-sleek cyberpunk visual refresh, faster real-time Socket.IO synchronization, and modernized architecture.
+- Introduced the Beta 2.0 Welcome Experience with direct download links for desktop and mobile apps.
+- Launched the full Server Bans & Moderation Suite: server admins can now manage, search, and revoke bans directly inside Server Settings → Bans & Moderation, complete with audit trail logs and moderator attribution.
+- Added smart Ticket & Report UUID-to-Username resolution in Support Center and Admin Queues, automatically converting cryptic user IDs into interactive member profile pills with avatars.
+- Revamped live creator stream alerts: cards are now cleanly proportioned at a compact desktop width with embedded official gold Velora SVG marks and Twitch badges.
+- Deployed the custom Nyx Cyberpunk Error & Outage Portal (/nyx-error.html), replacing generic Apache errors with real-time status diagnostics, countdown auto-reconnect, and Nyx telemetry.
+- Preserved and hardened all user identity and profile persistence contracts across NeonLogin, Twitch OAuth, and custom profile media.
+
 ## DeepFilterNet3 AI Neural Noise Suppression & Platform Stability Suite
 
 **August 30, 2026** · AI Audio Processing, DeepFilterNet3, Message Reliability, Null-Safety & Mobile Polish
